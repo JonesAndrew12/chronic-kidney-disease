@@ -71,34 +71,3 @@ if st.button("Predict"):
 
     except ValueError:
         st.write("Please enter valid numeric values.")
-# app.py
-
-# app.py
-
-
-# app.py
-
-# app.py
-
-from sklearn.impute import SimpleImputer
-
-
-def preprocess_data(data):
-    # Impute missing values using SimpleImputer
-    imputer = SimpleImputer(strategy="mean")
-    return imputer.fit_transform(data)
-
-
-def predict_kidney_disease(bgr, rc, wc):
-    # Simplified CKD prediction logic
-    if bgr > 130 and rc < 5.5 and wc > 8000:
-        return "The Person is suffering from Chronic disease"
-    else:
-        return "No Chronic diseases"
-
-
-def integrated_prediction(bgr, rc, wc):
-    # Integrated prediction using preprocessing and CKD prediction
-    data = [[bgr, rc, wc]]
-    preprocessed_data = preprocess_data(data)
-    return predict_kidney_disease(*preprocessed_data[0])
