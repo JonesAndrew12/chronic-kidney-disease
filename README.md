@@ -1,2 +1,2 @@
 # chronic-kidney-diseses
- it used to find the patient is suffering from kidney dises
+ The model predicts the presence of chronic kidney disease in a patient based on the dataset
